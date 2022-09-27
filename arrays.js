@@ -12,6 +12,19 @@ console.log(arr[6])// dentro [] dentro coloco a posição que quero
 arr[8] = 'Agora a posição 8 existe dentro de arr'
 
 
+const lista = ['João', 'Maria', 'Paulo', 'Pedro', 'Vitória', 'Augusto', 'Fábio', 'Larissa' ]
+
+lista.push('Roberta') //push, adc contéudo no final do array
+
+lista.unshift('Gustavo') //unshift, adc contéudo no final do array
+
+lista.pop() // pop, remover o último contéudo 
+
+lista.shift() // shift, remove o primeiro contéudo
+
+console.log(lista.concat('Julio')) // gerar um novo array, com o valor no final
+
+console.log(lista.join('-> ')) // join, unir valores com algo no meio
 
 
 

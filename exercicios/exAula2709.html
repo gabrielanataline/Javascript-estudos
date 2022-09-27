@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+// a)Crie um algortimo que recebe informações de 15 produtos
+// b)Cada produto possui nome, marca, uma foto (link de uma imagem da internet), preço unitário e a quantidade de produtos em estoque.
+// c)imprima no HTML as informações de cada produto
+// d)e o produto entre o preço e a quantidade de produtos em estoque (preço total)
+
+
+let produtos = [ {
+    nome: 'default',
+    marca:'default',
+    imagem: '',
+    preco: 0,
+    estoque: 0,
+    precototal: 0,
+
+}]
+
+for (let i=1; i<=15; i++){
+    produtos.nome = prompt('Digite o nome do produto:')
+    produtos.marca = prompt('Digite a marca do produto:')
+    produtos.imagem = prompt('Informe o link do produto:')
+    produtos.preco =parseFloat(prompt('Digite o preço do produto:'))
+    produtos.estoque =parseFloat(prompt('Digite a quantidade em estoque:'))
+    produtos.precototal = produtos.preco*produtos.estoque
+
+    document.write(`<p><h3> Produto: ${i}</p></h3>`)
+    document.write(`<p><b>Nome:</b><i> ${produtos.nome}</i></p>`)
+    document.write(`<p><b>Marca:</b><i> ${produtos.marca}</i></p>`)
+    document.write(`<p><b>Preço:</b> <i>${produtos.preco} reais</i></p>`)
+    document.write(`<p><b>Estoque:</b> <i>${produtos.estoque.toFixed(2)}</i></p>`)
+    document.write(`<p><b>Preço em estoque:</b> <i>${produtos.precototal.toFixed(2)} reais<i></p>`)
+    document.write(`<img src="${produtos.imagem}">`)
+
+ 
+}
+
+</script>
+</body>
+</html>

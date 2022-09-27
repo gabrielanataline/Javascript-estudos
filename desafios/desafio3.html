@@ -17,11 +17,13 @@ const qtdProdutos = parseInt(prompt('Informe a quantidade de produtos'))
 
  const precosProdutos = []
 
+ 
 
  for (let i=0; i<qtdProdutos; i++){
     let preco = parseFloat(prompt('Informe o valor do produto'))
-    precosProdutos[i] = preco
-}
+    // precosProdutos[i] = preco
+    precosProdutos.push(preco) //irá adc no array o valor
+ }
 
 let soma = 0
 // para cada preco da nossa lista de precos 
